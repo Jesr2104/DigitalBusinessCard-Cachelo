@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Restaurante Cachelo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-XxjP+xA5jO0RXJrQOzr7NTnTbQj4kQNRHu9ZTx7ZW7Vv9idjcZdjUm/ROIV7BB7LBZ6c+xPBR6hVvYVgk9D1xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
@@ -35,7 +36,7 @@
       line-height: 1.6;
     }
     .cta {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: bold;
       margin-bottom: 15px;
       color: #cb3e48;
@@ -116,20 +117,74 @@
       border: 4px solid #cb3e48;
       margin-bottom: 5px;
     }
-    .powered-by {
-      background-color: #f0f0f0;
-      padding: 15px;
-      font-size: 14px;
-      color: #555;
+
+    .contact-info {
       display: flex;
       flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+      font-family: 'Arial', sans-serif;
       align-items: center;
-      border-top: 1px solid #ddd;
+      margin-bottom: 35px;
+      margin-top: 30px;
     }
-    .powered-by img {
-      height: 30px;
-      margin-bottom: 3px;
-    }  
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      color: #555;
+      font-weight: bold;
+    }
+
+    .info-item i {
+      font-size: 20px;
+      color: #B72D36;
+    }
+
+    .banner-container {
+        position: relative;
+        width: 100%;
+        height: 86px;
+    }
+
+    .black-banner {
+        width: 100%;
+        height: 86px;
+        background-color: #000000;
+        background-image: url('background-origen.png');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .banner-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 86px;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .banner-link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        transition: transform 0.3s ease;
+    }
+
+    .banner-link:hover {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -161,6 +216,17 @@
       Nos apasiona brindar un servicio cálido, familiar y cercano, donde cada plato está pensado para sorprenderte. Somos un equipo comprometido con la calidad, la creatividad y el amor por los pequeños detalles. Ven a Cachelo a vivir un viaje de sabores inolvidable en un entorno acogedor y lleno de historia.
     </div>
 
+    <div class="cta">
+      Informacion de contacto
+    </div>
+    
+    <div class="contact-info">
+      <div class="info-item"><i class="fab fa-whatsapp"></i> +34 600 95 85 95</div>
+      <div class="info-item"><i class="fas fa-phone"></i> +34 822 01 63 59</div>
+      <div class="info-item"><i class="fas fa-envelope"></i> Cachelo.restaurante@gmail.com</div>
+      <div class="info-item"><i class="fas fa-map-marker-alt"></i> C. Calvario, 7, 38300 Casco Histórico, La Orotava, Tenerife</div>
+    </div>
+
     <div class="cta">Conecta con nuestra historia y sé parte de la experiencia Cachelo</div>
 
     <div class="social-icons">
@@ -186,9 +252,12 @@
     </div>
   </div>
 
-  <a href="#" class="powered-by" style="text-decoration: none;">
-  <img src="logo-origen.png" alt="Origen logo">
-  <span>Una creación de <strong>Origen</strong></span>
-
+  <div class="banner-container">
+      <div class="black-banner">
+          <a href="https://jesr2104.github.io/DigitalBusinessCard-Origen/" class="banner-link" target="_blank">
+              <img src="origen-link.png" alt="Logo centrado" class="center-image">
+          </a>
+      </div>
+  </div>
 </body>
 </html>
